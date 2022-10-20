@@ -15,15 +15,15 @@
                         <input class="" type="radio" id="two" name="radioTrue" value="Concluido" v-model="addTodo.complete" />
                     </div>-->
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="radio1" name="inlineRadioFalse" value="Incomplete" v-model="addTodo.complete"/>
+                        <input type="radio" id="radio1" name="inlineRadioFalse" value="Incomplete" v-model="addTodo.complete"/>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" id="radio2" name="inlineRadioTrue" value="Complete" v-model="addTodo.complete"/>
+                        <input type="radio" id="radio2" name="inlineRadioTrue" value="Complete" v-model="addTodo.complete"/>
                     </div>
                 </div>
                 <div class=" d-flex flex-row justify-content-end gap-2">
                     <button type="reset" class="border border-white bg-danger rounded" @click="cancelar">Cancelar</button>
-                    <button type="submit" class="border border-white bg-info rounded">Guardar</button>
+                    <button type="submit" class="border border-white bg-primary rounded">Guardar</button>
                 </div>
             </form>
         </div>          

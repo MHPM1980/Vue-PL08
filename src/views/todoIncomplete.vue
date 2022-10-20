@@ -16,7 +16,7 @@
         </div>
         <div class="border border-3 mt-4 border-white p-3">
             
-                <div class="d-flex flex-row border border-2 border-white p-4 gap-2" v-for="(item,i) in getTodos">
+                <div class="d-flex flex-row border border-2 border-white p-4 gap-2" v-for="(item,i) in getTodosIncomplete">
                     <div>
                         <input class="form-check-input" type="radio" @click="selectTodo(i)" name="flexRadioDefault" id="flexRadioDefault1">    
                     </div>
@@ -47,7 +47,7 @@
         },
 
         computed: {
-            ...mapState(todoStore,['getTodos', 'getCounter'])
+            ...mapState(todoStore,['getCounter', 'getTodosIncomplete'])
         },
 
         methods:{
@@ -73,7 +73,7 @@
 
             todos(){
                 this.$router.push({name: "todoList"});
-            },
+            },          
         }
     }
 

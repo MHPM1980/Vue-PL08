@@ -4,20 +4,24 @@
             <h1 class="text-white p-3">Prática Laboratorial 08</h1>
         </div>
         <div class="border border-white d-flex flex-column mt-4 p-4">
-            <form @submit.prevent="editar($event)">
+            <form @submit.prevent = "editar($event)">
                 <div class="d-flex flex-row justify-content-end align-items-end mt-4 gap-4">
-                    <div><button class="border border-white bg-info rounded">Editar</button></div>
-                    <div><button class="border border-white bg-danger rounded" @click="eliminar">Eliminar</button></div>
+                    <div>
+                        <button class="border border-white bg-primary">Editar</button>
+                    </div>
+                    <div>
+                        <button class="border border-white bg-danger" @click = "eliminar">Eliminar</button>
+                    </div>
                 </div>
                 <div class="border border-white d-flex my-3 p-4">
                     <div class="d-flex flex-column align-items-start">
                         <input type="text" class="form-control" placeholder="Descrição da tarefa" ref="descricao" v-model="$route.params.description">
                         <div class=" d-flex flex-row mt-4 gap-2">
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioFalse" id="inlineRadio1" value="Incomplete" v-model="addTodo.complete"/>
+                                <input type="radio" id="radio1" name="inlineRadio" value="Incomplete" v-model="$route.params.complete"/>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioTrue" id="inlineRadio2" value="Complete" v-model="addTodo.complete"/>
+                                <input type="radio" id="radio2" name="inlineRadio" value="Complete" v-model="$route.params.complete"/>
                             </div>
                         </div>
                         <p>{{$route.params.data}}</p>
@@ -77,10 +81,10 @@
 
 <style scoped>
 
-input[name="inlineRadioFalse"] {
+input[id="radio1"] {
 	accent-color: #DC3545;
 }
-input[name="inlineRadioTrue"] {
+input[id="radio2"] {
 	accent-color: #0850f7;
 }
 
