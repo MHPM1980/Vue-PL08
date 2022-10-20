@@ -10,10 +10,6 @@
                 </div>
                 <div class=" d-flex flex-row mt-4 gap-2">
                     <p class ="text-white">Completa?</p>
-                    <!--<div class="">
-                        <input class="" type="radio" id="one" name="radioFalse" value="Por concluir" v-model="addTodo.complete" />
-                        <input class="" type="radio" id="two" name="radioTrue" value="Concluido" v-model="addTodo.complete" />
-                    </div>-->
                     <div class="form-check form-check-inline">
                         <input type="radio" id="radio1" name="inlineRadioFalse" value="Incomplete" v-model="addTodo.complete"/>
                     </div>

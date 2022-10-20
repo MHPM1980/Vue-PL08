@@ -22,7 +22,10 @@
                             </div>
                             <div class="form-check form-check-inline">
                                 <input type="radio" id="radio2" name="inlineRadio" value="Complete" v-model="$route.params.complete"/>
-                            </div>
+                            </div>     
+                        </div>
+                        <div class="text-white p-2 d-flex flex-column">
+                                <h5>{{$route.params.date}}</h5>
                         </div>
                         <p>{{$route.params.data}}</p>
                     </div>
